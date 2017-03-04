@@ -4,4 +4,5 @@
 1. framework7
 2. seajs
 3. jQuery
-4. 使用gulp进行代码编译
+4. 使用gulp进行代码编译  
+### 项目最初架构时间：2016.9

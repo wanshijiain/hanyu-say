@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+        <div class="pages">
+            <div id="vipHome" data-page="vipHome" class="page navbar-fixed toolbar-fixed">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"></div>
+                        <div class="center"><img src="../img/hanyuLogo.png"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="page-content pull-to-refresh-content">
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                    <div class="vip-head">
+                        <div class="sign-in hide">
+                            <a href="#" class="alert-text-title" style="color:white">
+                            <i class="iconfont icon-heart" style="color:white"></i>
+                            <br>签到
+                            </a>
+                        </div>
+                        <div class="points-title hide">
+                            当前积分
+                        </div>
+                        <div class="points-num hide"><a href="fundsDetail.html" class="jifen">-</a></div>
+                        <div class="tuiguang" style="display: none"><a href="coachingAmbassador.html">推广大使 <i class="iconfont icon-rightdouble" style="font-size: 18px;color: white"></i></a></div>
+                    </div>
+                    <div class="person-info">
+                        <div><img src="../img/head.png" style="margin-top: -32px" id="avatar" class="head-pic changeAvatar"></div>
+                        <div style="margin-top: 8px">
+                            <div class="person-name"><a class="username" id="userName">请登录</a></div>
+                            <div class="btn-vip hide" id="vipTag">VIP</div><br>
+                            <div class="btn-share"><a href="collection.html">收藏</a> | <a href="share.html" class="future-link">分享</a></div>
+                        </div>
+                    </div>
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <a href="myQA.html" class="item-link item-content hide">
+                                    <div class="item-inner">
+                                        <div class="item-title">我的问答</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="addFunds.html" class="item-link item-content hide">
+                                    <div class="item-inner">
+                                        <div class="item-title">积分充值</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="vipRenew.html" class="item-link item-content hide">
+                                    <div class="item-inner">
+                                        <div class="item-title">会员续费</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="accordion-item"><a class="item-content item-link">
+                                <div class="item-inner">
+                                    <div class="item-title">课程分类</div>
+                                </div></a>
+                                <div class="accordion-item-content">
+                                    <a class="item-content tagLink" data-part="SFS" data-text="从零开始学运营">
+                                        <div class="item-inner">
+                                            <div class="item-title">从零开始学运营</div>
+                                        </div>
+                                    </a>
+                                    <a class="item-content tagLink" data-part="ECS" data-text="基础知识">
+                                        <div class="item-inner">
+                                            <div class="item-title">基础知识</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <a class="item-link item-content yjfk-btn">
+                                        <div class="item-inner">
+                                            <div class="item-title">意见反馈</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-link item-content" href="settings.html">
+                                        <div class="item-inner">
+                                            <div class="item-title">个人设置</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Toolbar-->
+
+                <div class="toolbar" style="height: 60px">
+                    <div class="toolbar-inner row">
+                        <!-- Toolbar links -->
+                        <div class="toolbar-items"><a href="QAhome.html" class="link"><p><i class="iconfont icon-multiask"></i></p></a><p class="toolbar-txt">关于</p></div>
+                        <div class="toolbar-items"><a href="studyHome.html" class="link"><p><i class="iconfont icon-book"></i></p></a><p class="toolbar-txt">课程</p></div>
+                        <div class="toolbar-items"><a href="vipHome.html" class="link"><p><i class="iconfont icon-user" style="color: chocolate"></i></p></a><p class="toolbar-txt" style="color: chocolate">个人</p></div>
+                    </div>
+                </div>
+            </div>
+        <!-- Link to another page -->
+        </div>
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+
+</body>
+</html>

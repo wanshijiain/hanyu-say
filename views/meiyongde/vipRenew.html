@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+
+        <div class="pages">
+            <div id="vipRenew" data-page="vipRenew" class="page navbar-fixed toolbar-fixed">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">会员状态</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="page-content pull-to-refresh-content">
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                    <section class="page_container">
+
+                    </section>
+
+                    <div class="list-block">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">时长（年）</div>
+                                    <div class="item-input">
+                                        <select id="years">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">需要积分</div>
+                                    <div class="item-after" style="margin-top: 0!important;" id="needs"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="pay" value="pointsPay" checked="checked">
+                                    <div class="item-media" style="padding-left: 15px">
+                                        <img src="../img/jifen.png" width="25px">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">积分兑换</div>
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="pay" value="aliPay">
+                                    <div class="item-media" style="padding-left: 15px">
+                                        <img src="../img/alipay.png" width="25px">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">支付宝支付<img src="../img/tuijian.png" height="20px"></div>
+                                    </div>
+                                </label>
+                            </li>
+
+                            <li style="display: none">
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="pay" value="wechatPay">
+                                    <div class="item-media" style="padding-left: 15px">
+                                        <img src="../img/wxpay.png" width="25px">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">微信支付<img src="../img/tuijian.png" height="20px"></div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div align="center">
+                        <a href="#" class="button button-round button-fill vipReNew" style="background-color: orange;font-size: 20px;width: 60%">会员续费</a>
+                    </div>
+
+                    <div class="card show-card" style="margin-top: 50px">
+                        <div class="card-header">会员权益</div>
+
+                        <div class="card-content">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media" style="padding-left: 15px">
+                                            <i class="iconfont icon-key"></i>
+                                        </div>
+                                        <div class="item-inner" style="padding-left: 0">
+                                            <div class="item-title-row">
+                                                <div class="item-title">解锁课程</div>
+                                            </div>
+                                            <div class="item-subtitle">可以解锁往期VIP精华课程，全部课程，畅听无阻。</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media" style="padding-left: 15px">
+                                            <i class="iconfont icon-book"></i>
+                                        </div>
+                                        <div class="item-inner" style="padding-left: 0">
+                                            <div class="item-title-row">
+                                                <div class="item-title">移动课堂</div>
+                                            </div>
+                                            <div class="item-subtitle">文字、音频、视频，三端同步，满足您生活各种状态下的学习需求。</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <script id="vipTmp" type="text/template7">
+                        {{#additional}}
+                        <div style="margin-top: 40px;text-align: center">
+                            会员到期时间：{{date stopDate}}
+                        </div>
+                        {{/additional}}
+                    </script>
+                </div>
+
+                <div class="toolbar" style="height: 60px">
+                    <div class="toolbar-inner row">
+                        <!-- Toolbar links -->
+                        <div class="toolbar-items"><a href="QAhome.html" class="link"><p><i class="iconfont icon-multiask"></i></p></a><p class="toolbar-txt">关于</p></div>
+                        <div class="toolbar-items"><a href="studyHome.html" class="link"><p><i class="iconfont icon-book" style="color: chocolate"></i></p></a><p class="toolbar-txt" style="color: chocolate">课程</p></div>
+                        <div class="toolbar-items"><a href="vipHome.html" class="link"><p><i class="iconfont icon-user"></i></p></a><p class="toolbar-txt">个人</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

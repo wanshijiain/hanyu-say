@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages">
+        <!-- Page, "data-page" contains page name -->
+            <div id="notify" data-page="notify" class="page navbar-fixed toolbar-fixed">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">通知设置</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+
+        <!-- Scrollable page content -->
+                <div class="page-content">
+                <div class="list-block" style="margin: 0">
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label" style="width: auto">有新课程时 是否允许通知</div>
+                            <div class="item-input">
+                                <label class="label-switch" style="float: right">
+                                    <input type="checkbox">
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-block" style="margin: 0">
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label" style="width: auto">有新消息时 是否允许通知</div>
+                            <div class="item-input">
+                                <label class="label-switch" style="float: right">
+                                    <input type="checkbox">
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Bottom Toolbar-->
+
+                <div class="toolbar" style="height: 60px">
+                    <div class="toolbar-inner row">
+                        <!-- Toolbar links -->
+                        <div class="toolbar-items"><a href="QAhome.html" class="link"><p><i class="iconfont icon-multiask"></i></p></a><p class="toolbar-txt">关于</p></div>
+                        <div class="toolbar-items"><a href="studyHome.html" class="link"><p><i class="iconfont icon-book" style="color: chocolate"></i></p></a><p class="toolbar-txt" style="color: chocolate">课程</p></div>
+                        <div class="toolbar-items"><a href="vipHome.html" class="link"><p><i class="iconfont icon-user"></i></p></a><p class="toolbar-txt">个人</p></div>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

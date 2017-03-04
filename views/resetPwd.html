@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+
+        <div class="pages">
+            <div id="resetPwd" data-page="resetPwd" class="page navbar-fixed toolbar-fixed">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">修改密码</div>
+                        <div class="right"><a id="resetPwdBtn">确定</a></div>
+                    </div>
+                </div>
+
+                <div class="page-content">
+                    <div class="loginForm">
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input">
+                                                <input type="text" name="phone" id="phone" placeholder="请输入11位手机号">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input two-item">
+                                                <input type="text" id="authCode" name="authCode" placeholder="请输入短信验证码">
+                                            </div>
+                                            <a id="sendAuthCode" class="resend-code">获取验证码</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-input">
+                                                <input type="password" name="pwd" id="pwd" placeholder="设置登陆密码，不少于6位">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+        <!-- Link to another page -->
+        </div>
+        </div>
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

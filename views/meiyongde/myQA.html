@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages">
+            <!-- Page, "data-page" contains page name -->
+            <div id="myQA" data-page="myQA" class="page navbar-fixed toolbar-fixed">
+                <!-- Top Navbar-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">问答</div>
+                        <div class="right"><a class="link" href="QAhome.html">提问</a></div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content infinite-scroll">
+                    <div class="buttons-row">
+                        <!-- 关联到第一个tab, 默认激活 -->
+                        <a href="#tab1" class="tab-link active button my-tab">我提问的</a>
+                        <!-- 关联到第二个tab -->
+                        <a id="tabtwo" href="#tab2" class="tab-link button my-tab">我偷看的</a>
+                    </div>
+
+                    <div class="tabs">
+
+                        <!-- Tab 1, 默认激活 -->
+                        <div id="tab1" class="tab active">
+                            <section class="page_container">
+                            </section>
+                        </div>
+                        <!-- Tab 2 -->
+                        <div id="tab2" class="tab">
+                            <section class="new_container">
+                            </section>
+                        </div>
+
+                    </div>
+                    <script id="myAsk" type="text/template7">
+                        <div class="list-block" style="margin-top: 0">
+                            {{#content}}
+                            <div class="card facebook-card">
+                                {{#if article_id}}
+                                <div class="card-header" data-id="{{article_id}}">
+                                    <div class="facebook-avatar"><img src="{{photo}}" width="34" height="34"></div>
+                                    <div class="facebook-name">{{article_title}}</div>
+                                    <div class="facebook-date">{{date create_date}}</div>
+                                </div>
+                                {{else}}
+                                <div class="card-header" data-id="{{article_id}}">
+                                    <div class="facebook-avatar"><img src="{{avatar avatar}}" width="34" height="34"></div>
+                                    <div class="facebook-name">{{name}}</div>
+                                    <div class="facebook-date">{{date create_date}}</div>
+                                </div>
+                                {{/if}}
+                                <div class="card-content">
+                                    <div class="card-content-inner">
+                                        <p>{{content}}</p>
+                                        <!--<p class="color-gray"><a href="#"><i class="iconfont icon-voice"></i>10积分偷听</a></p>-->
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="link listen" data-id="{{id}}" data-mine="true"></i>查看</a>
+                                    {{#if article_id}}
+                                    <a class="link ask" data-id="{{article_id}}" data-title="{{article_title}}">此篇提问</a>
+                                    {{/if}}
+                                    <a href="#" class="link">偷看 {{listen}}</a>
+                                    <a href="#" class="link">{{like}} <i class="iconfont icon-appreciate" style="font-size: 15px"></i></a>
+                                </div>
+                            </div>
+                            {{/content}}
+                        </div>
+                    </script>
+                    <script id="myListen" type="text/template7">
+                        <div class="list-block" style="margin-top: 0">
+                            {{#content}}
+                            <div class="card facebook-card">
+                                {{#if article_id}}
+                                <div class="card-header" data-id="{{article_id}}">
+                                    <div class="facebook-avatar"><img src="{{photo}}" width="34" height="34"></div>
+                                    <div class="facebook-name">{{article_title}}</div>
+                                    <div class="facebook-date">{{date create_date}}</div>
+                                </div>
+                                {{else}}
+                                <div class="card-header" data-id="{{article_id}}">
+                                    <div class="facebook-avatar"><img src="{{avatar avatar}}" width="34" height="34"></div>
+                                    <div class="facebook-name">{{name}}</div>
+                                    <div class="facebook-date">{{date create_date}}</div>
+                                </div>
+                                {{/if}}
+                                <div class="card-content">
+                                    <div class="card-content-inner question-content" data-id="{{id}}">
+                                        <p>{{content}}</p>
+                                        <!--<p class="color-gray"><a href="#"><i class="iconfont icon-voice"></i>10积分偷听</a></p>-->
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="link listen" data-id="{{id}}" data-mine="false">查看</a>
+                                    {{#if article_id}}
+                                    <a href="#" class="link">此篇提问</a>
+                                    {{/if}}
+                                    <a href="#" class="link">偷看 {{listen}}</a>
+                                    <a href="#" class="link">{{like}} <i class="iconfont icon-appreciate" style="font-size: 15px"></i></a>
+                                </div>
+                            </div>
+                            {{/content}}
+                        </div>
+                    </script>
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Bottom Toolbar-->
+
+        <div class="toolbar" style="height: 60px">
+            <div class="toolbar-inner row">
+                <!-- Toolbar links -->
+                <div class="toolbar-items"><a href="QAhome.html" class="link"><p><i class="iconfont icon-multiask"></i></p></a><p class="toolbar-txt">关于</p></div>
+                <div class="toolbar-items"><a href="studyHome.html" class="link"><p><i class="iconfont icon-book" style="color: chocolate"></i></p></a><p class="toolbar-txt" style="color: chocolate">课程</p></div>
+                <div class="toolbar-items"><a href="vipHome.html" class="link"><p><i class="iconfont icon-user"></i></p></a><p class="toolbar-txt">个人</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

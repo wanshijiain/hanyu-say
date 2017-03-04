@@ -1,0 +1,11 @@
+{
+  "rspCode":0,
+  "rspDesc":"操作成功",
+  "result": {
+    "webVersion": 104,
+    "androidVersion": "1.0.1",
+    "androidDownloadUrl": "http://60.167.138.17/imtt.dd.qq.com/16891/9FEBFDB8FB980D3BE95018F0FD701144.apk?mkey=58b932517bef9229&f=6d25&c=0&fsname=com.hanyusay.hyreader_1.0.1_100012.apk&hsr=4d5s&p=.apk",
+    "iosVersion": "1.0.1",
+    "iosDownloadUrl": "https://itunes.apple.com/cn/app/%E5%AF%92%E7%BE%BD%E8%AF%B4%E7%94%B5%E5%95%86/id1184827082?mt=8"
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+
+        <div class="pages">
+            <div id="coachAmbassador" data-page="coachingAmbassador" class="page navbar-fixed no-toolbar">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">推广大使二维码</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+
+                <div class="page-content" align="center">
+                    <div class="share-container">
+                        <div class="share-title"><img src="../img/article.png"><div class="share-title-txt">寒羽说电商</div></div>
+                        <div><img src="../img/line.png"></div>
+                        <div class="share-small">我是<a id="who-am-i">小王</a></div>
+                        <div class="share-small">我为运营干货代言</div>
+                        <div class="twoD-code"><img src="../img/2Dcode.png"></div>
+                        <div class="share-small">Keep Learning</div>
+                        <div class="share-small">每年一起听50部干货</div>
+                    </div>
+                    <div class="share-foot">
+                        <div style="padding-top: 10px">长按图片 扫描识别图中二维码加入我们</div>
+                    </div>
+                    <div class="picker-toolbar">
+                        <div class="left">二维码使用指南</div>
+                        <div class="right open-info"><a style="color: gray">了解详情 <img src="../img/upward.png"></a></div>
+                    </div>
+
+                </div>
+                <div class="picker-modal picker-info">
+                    <div class="toolbar">
+                        <div class="toolbar-inner">
+                            <div class="left"></div>
+                            <div class="right close-picker"><a class=""><i class="iconfont icon-backward"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="picker-modal-inner">
+                        <div class="content-block">
+                            <h4>如何使用二维码？</h4>
+                            <p>我也不知道</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Link to another page -->
+        </div>
+
+        <!-- Bottom Toolbar-->
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

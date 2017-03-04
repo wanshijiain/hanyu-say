@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main toolbar-fixed">
+        <!-- Top Navbar-->
+
+
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages">
+            <!-- Page, "data-page" contains page name -->
+            <div id="article" data-page="article" class="page navbar-fixed toolbar-fixed">
+                <link rel="stylesheet" href="../static/libs/video-js/video-js.min.css">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center"><img src="../img/hanyuLogo.png"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <section class="page_container">
+
+                    </section>
+                    <script id="articleContainer" type="text/template7">
+                        <div class="card facebook-card">
+                            <div class="card-header no-border">
+                                <div class="facebook-avatar"><img src="{{photo}}" width="34" height="34"></div>
+                                <div class="facebook-name">{{title}}</div>
+                                <div class="facebook-date">{{dict "partType" part}}</div>
+                            </div>
+                            <div class="card-footer">
+                                {{#if myCollect}}
+                                <a class="link collect-tag" data-id="{{id}}" data-mycollect="{{myCollect}}"><span class="collect collected">已收藏</span><i class="iconfont icon-heart collected"></i></a>
+                                {{else}}
+                                <a class="link collect-tag" data-id="{{id}}" data-mycollect="{{myCollect}}"><span class="collect">收藏</span><i class="iconfont icon-heart"></i></a>
+                                {{/if}}
+                            </div>
+                        </div>
+                            {{#if video}}
+                        <div class="card facebook-card">
+                            <div class="card-header text-center">看</div>
+                            <div class="card-content article-container">
+                                <video class="video-js vjs-default-skin vjs-big-play-centered" controls="controls" style="width: 100%" src="{{video}}">
+                                    <h3 class="vjs-no-js">当前不支持视频播放</h3>
+                                </video>
+                            </div>
+                        </div>
+                            {{/if}}
+                            {{#if music}}
+                        <div class="card facebook-card">
+                            <div class="card-header text-center">听</div>
+                            <div class="card-content article-container">
+                                <audio controls="controls" style="width: 100%" src="{{music}}">
+                                    当前不支持音频播放
+                                </audio>
+                            </div>
+                        </div>
+                            {{/if}}
+                        <div class="card facebook-card">
+                            <div class="card-header text-center">读</div>
+                            <div class="card-content article-container">{{content}}</div>
+                            <div class="card-footer">
+                                {{#if myCollect}}
+                                <a class="link collect-tag" data-id="{{id}}" data-mycollect="{{myCollect}}"><span class="collect collected">已收藏</span><i class="iconfont icon-heart collected"></i></a>
+                                {{else}}
+                                <a class="link collect-tag" data-id="{{id}}" data-mycollect="{{myCollect}}"><span class="collect">收藏</span><i class="iconfont icon-heart"></i></a>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </script>
+
+                    <!-- Link to another page -->
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Bottom Toolbar-->
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+
+</body>
+</html>

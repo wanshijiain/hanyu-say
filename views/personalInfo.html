@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages">
+        <!-- Page, "data-page" contains page name -->
+            <div id="personalInfo" data-page="personalInfo" class="page navbar-fixed toolbar-fixed">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">个人信息</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+        <!-- Scrollable page content -->
+                <div class="page-content">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <a class="item-content item-link changeAvatar" style="color: black">
+                                <div class="item-inner">
+                                    <div class="item-title">头像</div>
+                                    <img src="../img/article.png" id="headpic" class="head-pic">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <a href="setName.html" class="item-content item-link" style="color: black">
+                                <div class="item-inner">
+                                    <div class="item-title">修改昵称</div>
+                                    <div style="color: gray" id="userid">小王</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="resetPwd.html" class="item-content item-link" style="color: black">
+                                <div class="item-inner">
+                                    <div class="item-title">修改密码</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

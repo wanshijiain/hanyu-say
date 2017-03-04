@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>寒羽说电商</title>
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/my-app.css">
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+
+        <div class="pages">
+            <div id="about" data-page="about" class="page navbar-fixed no-toolbar">
+                <!-- Top Navbar-->
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                        <div class="left"><a class="back" href="#"><i class="iconfont icon-backward"></i></a></div>
+                        <div class="center">关于寒羽说电商</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <!-- Page, "data-page" contains page name -->
+            <!-- Scrollable page content -->
+
+                <div class="page-content" align="center">
+                    <div style="margin-top: 35px">
+                        <img class="circle-img" src="../img/hanyuLogo.png">
+                    </div>
+                    <div style="margin-top:15px;font-size: 28px">
+                        寒羽说电商
+                    </div>
+                    <div>
+                        版本号：0.6.6
+                    </div>
+                    <div style="margin-top: 15px">
+                        <img src="../img/line.png" width="80%">
+                    </div>
+                    <div class="hanyu-intro">
+                        <p>寒羽说电商是寒羽倾力打造的一款电商顾问APP，这里每周寒羽会精心打磨一篇内容，成体系的教你如何做好电商，同时在学习和经营的过程中，有任何问题都可以在问答板块向寒羽提问。</p>
+                    </div>
+                    <div>
+                        杭州语淘科技有限公司
+                    </div>
+                </div>
+            </div>
+        <!-- Link to another page -->
+        </div>
+
+
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main navbar-fixed toolbar-fixed">
+        <div class="pages">
+            <div id="register"  data-page="register" class="page no-navbar no-toolbar no-swipeback">
+                <div class="page-content login-screen-content login-page-content">
+                    <div class="login-screen-title">注册</div>
+                    <form id="registerForm1">
+                        <div class="list-block" style="width: 80%">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label register-title">手机号</div>
+                                        <div class="item-input">
+                                            <input type="number" id="loginName" name="loginName" placeholder=""/>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label register-title">验证码</div>
+                                        <div class="item-input">
+                                            <input type="text" name="authCode" placeholder=""/>
+                                        </div>
+                                        <div class="item-after">
+                                            <div class="item-title send-code"><a id="sendAuthCode">短信验证码</a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label register-title">昵称</div>
+                                        <div class="item-input">
+                                            <input type="text" name="name" placeholder="请设置您的昵称">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label register-title">密码</div>
+                                        <div class="item-input">
+                                            <input type="password" name="pl" placeholder="设置不少于6位登陆密码">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label register-title">授权码</div>
+                                        <div class="item-input">
+                                            <input type="text" name="activeCode" placeholder="">
+                                        </div>
+                                        <div class="item-after">
+                                            <div class="item-title send-code"><a class="activeCodeHelp"><span class="color-red">如何获取?</span></a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-block" style="width: 80%">
+                            <div>
+                                <a class="button button-big button-register reg">注册</a>
+                            </div>
+                            <div class="list-block-label">
+                                <p><a href="login.html">返回登录页面</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+<script>
+
+</script>
+</body>
+</html>

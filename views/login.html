@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>寒羽说电商</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.min.css">
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link rel="stylesheet" href="../static/libs/framework7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+</head>
+<body>
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <div class="pages">
+            <div id="login" data-page="login" class="page no-navbar no-toolbar no-swipeback">
+                <div class="page-content login-screen-content login-page-content">
+                    <div class="login-screen-title"><img src="../img/hanyuLogo.png" width="150px"></div>
+                    <form>
+                        <div class="list-block" style="width: 80%">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">用户名</div>
+                                        <div class="item-input">
+                                            <input type="text" id="username" name="username" placeholder="您的用户名"/>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">密码</div>
+                                        <div class="item-input">
+                                            <input type="password" id="password" name="password" placeholder="请填写密码"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-block" style="width: 80%">
+                            <div class="row">
+                                <div class="col-50">
+                                    <a id="loginBtn" class="button button-big button-login">登录</a>
+                                </div>
+                                <div class="col-50">
+                                    <a href="register.html" class="button button-big button-register">注册</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="text-align: center"><a href="resetPwd.html">忘记密码？</a></p>
+                    </form>
+                    <div style="text-align: center;" class="weixinLogin hide">
+                        <img src="../img/weixin.png" width="50px">
+                        <p>微信登录</p>
+                    </div>
+                </div>
+
+                <script id="loginScreen" type="text/template7">
+                    <div class="login-screen wxBoundCel">
+                        <div class="view">
+                            <div class="pages">
+                                <div class="page">
+                                    <div class="page-content login-screen-content login-page-content">
+                                        <div class="login-screen-title">绑定手机号</div>
+                                        <form class="loginForm">
+                                            <div class="list-block" style="width: 80%">
+                                                <ul>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label register-title">手机号</div>
+                                                            <div class="item-input">
+                                                                <input id="wxCel" type="text" name="cel" placeholder="输入手机号">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label register-title">验证码</div>
+                                                            <div class="item-input two-item">
+                                                                <input id="authCode" type="number" name="authCode" placeholder="请输入">
+                                                            </div>
+                                                            <div class="item-after">
+                                                                <div class="item-title send-code"><a>发送验证短信</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label register-title">授权码</div>
+                                                            <div class="item-input">
+                                                                <input type="text" id="activeCode" name="activeCode" placeholder="">
+                                                            </div>
+                                                            <div class="item-after">
+                                                                <div class="item-title send-code"><a class="activeCodeHelp"><span class="color-red">如何获取?</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="list-block">
+                                                <ul style="background-color: white!important">
+                                                    <li class="boundCel">
+                                                        <a class="item-link list-button wxBoundCelBtn btn btn-blue">绑定手机号</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="list-block">
+                                                <p><a class="link back">返回登录页面</a></p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Path to Framework7 Library JS-->
+<script src="../static/libs/seajs/sea.js"></script>
+<script src="../js/core/main.js"></script>
+</body>
+
+</html>
